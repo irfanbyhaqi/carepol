@@ -24,7 +24,7 @@
     <?php }else{ ?>
       <?php echo $this->session->flashdata('message'); ?>
       <form class="form-signin" action="<?= site_url('C_Order/send_konfirmasi/'.$data->id_order.'/'.$data->password); ?>" method="POST" enctype="multipart/form-data">
-        <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <img class="mb-4" src="<?= base_url() ?>assets/images/logo/VerMain_LogoHead.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Payment confirmation</h1>
         <div class="input-group date" data-provide="datepicker">
             <input type="text" name="tanggal" class="form-control" placeholder="Date .." required>

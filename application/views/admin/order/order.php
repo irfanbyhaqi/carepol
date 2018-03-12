@@ -40,16 +40,20 @@
                       <?php if ($data['konfirmasi']){ ?>
                         <span class="label label-success">Confirmed</span>
                       <?php }else{
-													$disabled = '';
+												$disabled = '';
+											$link = '';
 
-													if ($data['status_bayar'] == "kosong") {
-														$disabled = 'disabled';
-													}
+											if ($data['status_bayar'] == "kosong") {
+												$disabled = 'disabled';
+												$link = '#';
+											}else{
+													$link = site_url('C_Order/konfirmasi/'.$data['id_order']);
+											}
 
-												?>
-                        <a href="<?= site_url('C_Order/konfirmasi/'.$data['id_order']) ?>" class="btn btn-danger btn-xs"
-                          <?= $disabled ?>
-                        >Confirmation</button>
+										?>
+										<a href="<?= $link ?>" class="btn btn-danger btn-xs"
+											<?= $disabled ?>
+										>Confirmation</button>
                       <?php } ?>
                     </td>
   								</tr>
