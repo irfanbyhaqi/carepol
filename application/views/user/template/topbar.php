@@ -14,7 +14,7 @@
                                 <li class="nav-item"> <a class="nav-link" href="#features">ABOUT</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#pricing">ORDER NOW</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#contact">CONTACT</a>
-                                <li class="nav-item"><a href="<?php echo base_url('Login')?>" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Login</a></li>
+                                <!-- <li class="nav-item"><a href="<?php echo base_url('Login')?>" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Login</a></li> -->
                             </ul>
                         </div>
                     </nav>

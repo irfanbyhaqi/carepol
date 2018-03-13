@@ -178,17 +178,18 @@
 
       }
 
-      function addMarker(Lat, Lng, jalan, created_at,suhu,gas,kelembaban,index_akhir1,rata_rata) {
+      function addMarker(Lat, Lng, jalan, created_at,suhu,gas,kelembaban,index_akhir1,suara,rata_rata) {
          var pt = new google.maps.LatLng(Lat, Lng);
          var marker;
          marker = 0;
 
          bounds.extend(pt);
-         var index_akhir = parseInt(rata_rata);
+         var index_akhir = parseInt(index_akhir1);
          var url_icon = '';
          var status = '';
          var saran = '';
          var color = '#3d3d3d';
+         var status_suara = fun_suara(suara);
          var font_color = '';
 
          switch (true) {
@@ -264,6 +265,7 @@
            'Kelembaban : ' + kelembaban + ' RH<br/>' +
            'CO : ' + index_akhir + ' RH<br/>' +
            'Status : ' + status + ' <br/>' +
+           'Status Kebisingan : ' + status_suara + ' <br/>' +
            'Komentar : <button class="btn btn-default btn-xs show_komen" data-jalan="'+jalan+'" style="font-size:10px;">click</button> <br/>' +
            '</p>'+
            '<p><font color="'+font_color+'">'+ saran +'</font></p>'
@@ -329,13 +331,50 @@
               success:function(data){
                 if (data.data.length > 0) {
                   for (var i = 0; i < data.data.length; i++) {
-                    addMarker(data.data[i]['lat'], data.data[i]['lon'], data.data[i]['jalan'], data.data[i]['created_at'], data.data[i]['suhu'], data.data[i]['co2'],data.data[i]['kelembaban'],data.data[i]['index_akhir'], data.data[i]['rata_rata']);
+                    addMarker(data.data[i]['lat'], data.data[i]['lon'], data.data[i]['jalan'], data.data[i]['created_at'], data.data[i]['suhu'], data.data[i]['co2'],data.data[i]['kelembaban'],data.data[i]['index_akhir'], data.data[i].suara, data.data[i]['rata_rata']);
                   }
                 }else{
                   console.log('Kosong');
                 }
               }
           })
+      }
+
+      function fun_suara(suara) {
+        var status = '';
+
+        switch (true) {
+          case suara >= 50 && suara <= 84:
+
+            status = "AMAN";
+
+            break;
+          case suara >= 85 && suara <= 104:
+
+            status = "SEDANG";
+            break;
+          case suara >= 105 && suara <= 129:
+
+            status = "WASPADA";
+
+
+            break;
+          case suara >= 130 && suara <= 160:
+
+            status = "BERBAHAYA";
+
+            break;
+
+            case suara >160:
+
+              status = "BERBAHAYA";
+
+              break;
+
+        }
+
+        return status;
+
       }
 
       function clear_lokasi() {

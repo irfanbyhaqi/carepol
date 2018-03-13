@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="<?= base_url() ?>assets/images/Logo/Carepol-ico.png"/>
+    <link rel="shortcut icon" href="<?= base_url() ?>assets/frontend/images/Logo/Carepol-ico.png"/>
     <meta name="keywords" content="HTML5, bootstrap, mobile, app, landing, ios, android, responsive">
 
     <!-- Font -->
@@ -19,5 +19,6 @@
     <!-- Main css -->
     <link href="<?= base_url() ?>assets/frontend/css/style2.css" rel="stylesheet">
     <link href="<?= base_url() ?>assets/frontend/css/style3.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/js/sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/js/sweetalert/dist/sweetalert.css">
 </head>
