@@ -1,26 +1,11 @@
-#cari > .cari1 {
-  width:400px;
-  margin-top:10px;
-}
+
 .content_info{
   width: 300px;
 }
 
-@media screen and (max-width: 1080px) {
-  #cari > .cari1 {
-    width:350px;
-  }
-}
-@media screen and (max-width: 780px) {
-  #cari > .cari1 {
-    width:330px;
-  }
-}
 
 @media screen and (max-width: 425px) {
-  #cari > .cari1 {
-    width:280px;
-  }
+
   .content_info{
     width: 280px;
   }

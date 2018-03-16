@@ -24,6 +24,8 @@
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="<?php echo base_url(); ?>assets/css/demo.css" rel="stylesheet" />
 
+		<link rel="stylesheet" href="<?= base_url() ?>assets/css/android.css">
+
 		<style media="screen">
 		.jalan{
 			margin: auto auto;

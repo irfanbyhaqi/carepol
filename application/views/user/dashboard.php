@@ -7,10 +7,10 @@
 
 <header class="bg-gradient" id="home">
     <div class="container mt-5">
-        <h1>Carepol</h1>
+        <h1 style="color:green">Carepol</h1>
         <p class="tagline">is an integrated monitoring system used to monitor air pollution levels in an urban area which then the levels will be mapped as a zone based on pollutant level </p>
     </div>
-    <div class="img-holder mt-3"><img src="<?= base_url() ?>assets/frontend/images/blackrev.png" alt="phone" class="img-fluid"></div>
+    <div class="img-holder mt-3"><img src="<?= base_url() ?>assets/frontend/images/pollution.png" alt="phone" class="img-fluid"></div>
 </header>
 <div class="client-logos my-5">
     <div class="container text-center">
@@ -31,7 +31,7 @@
                             <span class="ti-harddrive gradient-fill ti-3x mr-3"></span>
                             <div class="media-body">
                                 <h4 class="card-title">Hardware System</h4>
-                                <p class="card-text"> CAREPOL device is used to detect environment parameter data (Co2) </p>
+                                <p class="card-text"> CAREPOL device is used to detect environment parameter data (Co, Co, temperature, humidity, noise)</p>
                             </div>
                         </div>
                     </div>
@@ -227,7 +227,7 @@
                   </div>
                   <div class=" d-block d-sm-inline-block">
                       <p class="mb-2">
-                          <h4><a class="mr-3">Carepol Communication</h4></a>
+                          <h4><a class="mr-3">Carepol Community</h4></a>
                       </p>
                   </div><hr>
                     <br /><center>
@@ -338,13 +338,23 @@
                       <p class="mb-0">
                           <i class="fa fa-facebook mr-2"></i> <a href="https://www.facebook.com/Carepol-System-329297554246776/?ref=br_rs">Facebook</a>
                       </p>
+                  </div><br>
+                  <div class="d-block d-sm-inline-block">
+                      <p class="mb-0">
+                          <i class="fa fa-shopping-bag mr-2"></i> <a href="https://www.tokopedia.com/buzneeskoe/alat-deteksi-pencemaran-udara-ii-polutan-detector">Find us on tokopedia</a>
+                      </p>
+                  </div>
+                  <div class="d-block d-sm-inline-block">
+                      <p class="mb-0">
+                          <i class="fa fa-shopping-bag mr-2"></i> <a href="https://www.bukalapak.com/p/industrial/mesin/mesin-pembersih/fx6dce-jual-alat-deteksi-pencemaran-udara-ii-polutan-detector?product_push=&promoted_configuration=">Find us on bukalapak</a>
+                      </p>
                   </div>
 
               </div>
               <div class="col-lg-5">
                   <div class="social-icons">
-                      <a class="navbar-brand" href="https://play.google.com/store?hl=in">
-                      <img src="assets/images/Logo/googleplay.png" class="img-fluid" alt="logo"></a>
+                      <a class="navbar-brand" href="https://play.google.com/store/apps/details?id=com.carepol.erg&hl=en">
+                      <img src="<?= base_url() ?>assets/images/Logo/googleplay.png" class="img-fluid" alt="logo"></a>
                   </div>
               </div>
           </div>

@@ -6,7 +6,7 @@ class Login extends CI_Controller {
         parent::__construct();
         $this->load->helper(array('url'));
         $this->load->library(array('form_validation', 'Recaptcha'));
-		
+
 		$this->load->model('auth_model');
     }
 
@@ -25,7 +25,7 @@ class Login extends CI_Controller {
         // validasi form
         $this->form_validation->set_rules('username', ' ', 'trim|required');
         $this->form_validation->set_rules('password', ' ', 'trim|required');
-        
+
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
 
         $recaptcha = $this->input->post('g-recaptcha-response');
@@ -49,7 +49,7 @@ class Login extends CI_Controller {
 					'id_pengguna' => $row->id_pengguna,
 					'username' => $row->username,
 					'status' => $row->status,
-					'key_alat' => $row->key_alat
+					'id_alat' => $row->key_alat
 				);
 				$this->session->set_userdata($data);
 
@@ -70,7 +70,7 @@ class Login extends CI_Controller {
     function logout() {
 //        destroy session
         $this->session->sess_destroy();
-        
+
 //        redirect ke halaman login
         redirect(site_url('login'));
     }
@@ -97,13 +97,13 @@ class Login extends CI_Controller {
 		else{
 			$this->session->set_flashdata("message","key tidak valid !");
 			redirect(site_url('login/error'));
-		}  
+		}
 	}
-	
+
 	function error(){
 		$this->load->view('register/tidak_valid');
 	}
-	
+
 	function registrasi(){
 		if($this->session->flashdata('berhasil')){
 			$this->load->view('register/registrasi');
@@ -113,7 +113,7 @@ class Login extends CI_Controller {
 			redirect(site_url('login/error'));
 		}
 	}
-	
+
 	function proses_registrasi(){
 		$data = $this->input->post(null, true);
 		$data['status']="User";

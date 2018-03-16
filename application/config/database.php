@@ -75,9 +75,12 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'carepolserver.mysql.database.azure.com',
-	'username' => 'carepol@carepolserver',
-	'password' => 'Unikom123*',
+	// 'hostname' => 'carepolserver.mysql.database.azure.com',
+	// 'username' => 'carepol@carepolserver',
+	// 'password' => 'Unikom123*',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'carepol',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -88,10 +91,10 @@ $db['default'] = array(
 	'char_set' => 'utf8',
 	'dbcollat' => 'utf8_general_ci',
 	'swap_pre' => '',
-	'encrypt' => array(
-        'ssl_ca' => realpath('./cert/BaltimoreCyberTrustRoot.crt.pem'),
-        'ssl_verify' => FALSE
-    ),
+	// 'encrypt' => array(
+  //       'ssl_ca' => realpath('./cert/BaltimoreCyberTrustRoot.crt.pem'),
+  //       'ssl_verify' => FALSE
+  //   ),
 	'compress' => FALSE,
 	'stricton' => FALSE,
 	'failover' => array(),

@@ -16,26 +16,15 @@
     </style>
 
     <!-- Bootstrap -->
-    <link href="<?= base_url() ?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!--  favicon -->
     <link rel="icon" type="image/png" sizes="96x96" href="<?php echo base_url(); ?>assets/img/favicon.png">
-    <!--  apple-touch-icon -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= base_url() ?>assets/img/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= base_url() ?>assets/img/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= base_url() ?>assets/img/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="<?= base_url() ?>assets/img/ico/apple-touch-icon-57-precomposed.png">
 
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,900' rel='stylesheet' type='text/css'>
-    <!-- FontAwesome CSS -->
-    <link href="<?= base_url() ?>assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- Material Icons CSS -->
     <link href="<?= base_url() ?>assets/fonts/iconfont/material-icons.css" rel="stylesheet">
-    <!-- magnific-popup -->
-    <link href="<?= base_url() ?>assets/magnific-popup/magnific-popup.css" rel="stylesheet">
+
     <!-- materialize -->
-    <link href="<?= base_url() ?>assets/materialize/css/materialize.min.css" rel="stylesheet">
-    <!-- shortcodes -->
-    <link href="<?= base_url() ?>assets/css/shortcodes/shortcodes.css" rel="stylesheet">
+
     <!-- Style CSS -->
     <link href="<?= base_url() ?>assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/android.css">
@@ -91,8 +80,8 @@
                       <textarea name="komentar" rows="4" id="komentar" cols="6" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
-                      <button type="button" class="waves-effect waves-light btn" id="kirim_komen" style="font-size:10px;">Send</button>
-                      <button type="button" class="waves-effect waves-light btn" id="kirim_close" style="font-size:10px;">Close</button>
+                      <button type="button" class="btn btn-xs btn-danger" id="kirim_komen" style="font-size:10px;">Send</button>
+                      <button type="button" class="btn btn-xs btn-danger" id="kirim_close" style="font-size:10px;">Close</button>
                     </div>
                 </div>
             </div>
@@ -105,21 +94,7 @@
 
     <!-- jQuery -->
     <script src="<?php echo base_url(); ?>assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-    <script src="<?= base_url() ?>assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?= base_url() ?>assets/materialize/js/materialize.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/jquery.easing.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/jquery.sticky.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/smoothscroll.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/imagesloaded.js"></script>
-    <script src="<?= base_url() ?>assets/js/jquery.stellar.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/jquery.inview.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/jquery.shuffle.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/menuzord.js"></script>
-    <script src="<?= base_url() ?>assets/js/bootstrap-tabcollapse.min.js"></script>
-    <script src="<?= base_url() ?>assets/owl.carousel/owl.carousel.min.js"></script>
-
-    <script src="<?= base_url() ?>assets/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/scripts.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
 

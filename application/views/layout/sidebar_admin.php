@@ -39,7 +39,7 @@
                 </li> -->
                 <li class="<?php echo isset($active_menu_area)?$active_menu_area:'' ?>">
                     <a href="<?php echo base_url('index.php/C_Wilayah'); ?>">
-                        <i class="fa fa-map-marker"></i>
+                        <i class="glyphicon glyphicon-map-marker"></i>
                         <p>Route</p>
                     </a>
                 </li>
@@ -72,7 +72,7 @@
                 </li>
                 <li class="<?php echo isset($active_menu_history) ? $active_menu_history:'' ?>">
                     <a href="<?php echo base_url('index.php/adminxdashboard/history'); ?>">
-                        <i class="fa fa-history"></i>
+                        <i class="glyphicon glyphicon-time"></i>
                         <p>Device History</p>
                     </a>
                 </li>

@@ -185,9 +185,9 @@ p.lead {
 .nav-menu.is-scrolling,
 .nav-menu.menu-is-open {
     background-color: rgb(74, 13, 143);
-    background: -moz-linear-gradient(135deg, #00e676 0%, #00e676 100%);
-    background: -webkit-linear-gradient(135deg, #00e676 0%, #00e676 100%);
-    background: linear-gradient(135deg, #00e676 0%, #00e676 100%);
+    background: -moz-linear-gradient(135deg, #ffff 0%, #ffff 100%);
+    background: -webkit-linear-gradient(135deg, #ffff 0%, #ffff 100%);
+    background: linear-gradient(135deg, #ffff 0%, #ffff 100%);
     -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
@@ -238,16 +238,16 @@ header {
 }
 
 .bg-gradient {
-    background-image: -moz-linear-gradient( 135deg, #00e676 0%, #00e676 100%);
-    background-image: -webkit-linear-gradient( 135deg, #00e676 0%, #00e676 100%);
-    background-image: -ms-linear-gradient( 135deg, #00e676 0%, #00e676 100%);
-    background-image: linear-gradient( 135deg, #00e676 0%, #00e676 100%);
+    background-image: -moz-linear-gradient( 135deg, #ffff 0%, #ffff 100%);
+    background-image: -webkit-linear-gradient( 135deg, #ffff 0%, #ffff 100%);
+    background-image: -ms-linear-gradient( 135deg, #ffff 0%, #ffff 100%);
+    background-image: linear-gradient( 135deg, #ffff 0%, #ffff 100%);
 }
 
 .tagline {
-    font-size: 23px;
+    font-size: 19px;
     font-weight: 300;
-    color: white;
+    color: green;
     max-width: 800px;
     margin: 0 auto;
 }

@@ -23,7 +23,7 @@ class Receiver_alat extends CI_Controller {
 		$data['key_alat'] =  $this->input->get('key_alat');
 		$data['suhu'] =  $this->input->get('suhu');
 		$data['co2'] =  $this->input->get('co2');
-		$data['co'] =  $this->get_mg($this->input->get('co'));
+		$data['co'] =  $this->get_mg($this->input->get('co')) ;
 		$data['kelembaban'] =  $this->input->get('kelembaban');
 		$data['index_akhir'] =  round($this->cek_perhitungan($data['co']));
 		$data['lat'] =  $this->input->get('lat');

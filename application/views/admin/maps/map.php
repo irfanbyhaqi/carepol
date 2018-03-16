@@ -85,7 +85,7 @@
 
 	        } // Tutup function initMap
 
-					function addMarker(Lat, Lng, jalan, created_at,suhu,gas,kelembaban,index_akhir1) {
+					function addMarker(Lat, Lng, jalan, created_at,suhu,gas,kelembaban,suara,index_akhir1) {
 						 var pt = new google.maps.LatLng(Lat, Lng);
 						 var marker;
              marker = 0;
@@ -97,6 +97,7 @@
 						 var saran = 'Di anjurkan memakai masker';
 						 var color = '#3d3d3d';
 						 var saran = '';
+						 var status_suara = fun_suara(suara);
 						 var font_color = '';
 
 						 switch (true) {
@@ -167,7 +168,7 @@
 
 						 map.fitBounds(bounds);
 
-						 var data = '<div id="content">'+
+						 var data = '<div class="content_info">'+
 							 '<h3 class="firstHeading">'+ created_at +'</h3>'+
 							 '<div id="bodyContent">'+
 							 '<p>CO2 : ' + gas + '<br/>' +
@@ -175,6 +176,7 @@
 							 'Kelembaban : ' + kelembaban + ' RH<br/>' +
 							 'CO : ' + index_akhir + '<br/>' +
 							 'Status : ' + status + ' <br/>' +
+							 'Status Kebisingan : ' + status_suara + ' <br/>' +
 							 '</p>'+
 							 '<p><font color="'+font_color+'">'+ saran +'</font></p>'
 							 '</div>'+
@@ -206,6 +208,43 @@
 						 	alert($data);
 					 }
 
+					 function fun_suara(suara) {
+						 var status = '';
+
+						 switch (true) {
+							 case suara >= 50 && suara <= 84:
+
+								 status = "AMAN";
+
+								 break;
+							 case suara >= 85 && suara <= 104:
+
+								 status = "SEDANG";
+								 break;
+							 case suara >= 105 && suara <= 129:
+
+								 status = "WASPADA";
+
+
+								 break;
+							 case suara >= 130 && suara <= 160:
+
+								 status = "BERBAHAYA";
+
+								 break;
+
+								 case suara >160:
+
+									 status = "BERBAHAYA";
+
+									 break;
+
+						 }
+
+						 return status;
+
+					 }
+
 					function get_data($data = null) {
 
 							clear_lokasi();
@@ -226,7 +265,7 @@
 									success:function(data){
 										if (data.data.length > 0) {
 											for (var i = 0; i < data.data.length; i++) {
-												addMarker(data.data[i]['lat'], data.data[i]['lon'], data.data[i]['jalan'], data.data[i]['created_at'], data.data[i]['suhu'], data.data[i]['co2'],data.data[i]['kelembaban'],data.data[i]['index_akhir']);
+												addMarker(data.data[i]['lat'], data.data[i]['lon'], data.data[i]['jalan'], data.data[i]['created_at'], data.data[i]['suhu'], data.data[i]['co2'],data.data[i]['kelembaban'],data.data[i]['suara'],data.data[i]['index_akhir']);
 											}
 										}else{
 											console.log('Kosong');

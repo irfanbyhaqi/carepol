@@ -74,7 +74,7 @@ class C_Frontend extends CI_Controller{
 
   public function view_android()
   {
-    $this->load->view('user/user_android');
+    $this->load->view('user/view_android');
   }
 
   public function get_android()
@@ -141,10 +141,12 @@ class C_Frontend extends CI_Controller{
 
        if ($get_where['pesan']) {
           $data = $this->receiver_alat_m->get_rata_rata_jalan($lat, $lon, $jalan);
-
+          $nama_data = $data['data']->row_array();
           $response['error'] = false;
           $response['message'] = "Berhasil";
-          $response['data'] = $data['data']->row_array();
+          $response['data'] = array(
+            ''
+          );
 
        }else{
          $response['error'] = true;
